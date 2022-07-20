@@ -19,7 +19,7 @@ class PlateStackClass:
         self.elems.append([])
 
     def _add_last_elem(self):
-        self.elems[-1].append(self.last_value)
+        self.elems[-1].append(str(self.last_value))
 
     def add_elem(self, value='a plate'):
 
@@ -77,3 +77,21 @@ class PlateStackClass:
             print(total)
         else:
             self.peek()
+
+
+c = PlateStackClass()
+c.add_elem()
+c.add_elem('some plate')
+c.add_elem(56)
+c.add_elem('4555')
+c.size()
+c.count_all()
+c.count_last_stack()
+c.peek()
+c.pop()
+c.count_all()
+c.count_last_stack()
+c.add_elem()
+c.show_stacks()
+c.add_elem('new element')
+c.info()
