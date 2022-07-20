@@ -13,7 +13,7 @@ class PlateStackClass:
         self.elems = []
         self.max_size = max_size
 
-        print(f'The main cmds: add_elem, pop, peek, show_stacks, size, info')
+        print(f'The main cmds: add_elem, pop, peek, show_stacks, size, count_all, count_last_stack, info')
 
     def _add_empty_list(self):
         self.elems.append([])
@@ -63,3 +63,17 @@ class PlateStackClass:
         for i, el in enumerate(self.elems, 1):
             print(str(i) + ' stack has element(s): ', ', '.join(el))
 
+    def count_last_stack(self):
+        if self.elems:
+            print(len(self.elems[-1]))
+        else:
+            self.peek()
+
+    def count_all(self):
+        if self.elems:
+            total = 0
+            for el in self.elems:
+                total += len(el)
+            print(total)
+        else:
+            self.peek()
