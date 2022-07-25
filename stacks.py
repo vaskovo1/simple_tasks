@@ -27,13 +27,10 @@ class PlateStackClass:
 
         if not self.elems:
             self._add_empty_list()
-            self._add_last_elem()
         else:
-            if len(self.elems[-1]) < self.max_size:
-                self._add_last_elem()
-            else:
+            if len(self.elems[-1]) == self.max_size:
                 self._add_empty_list()
-                self._add_last_elem()
+        self._add_last_elem()
 
         self.show_stacks()
 
