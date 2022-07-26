@@ -1,3 +1,16 @@
+"""
+Реализуйте функцию choose_plural(), которая принимает два аргумента в следующем порядке:
+
+    amount — натуральное число, количество
+    declensions — кортеж из трех вариантов склонения существительного
+
+Функция должна возвращать строку, полученную путем объединения подходящего существительно из кортежа declensions и
+количества amount, в следующем формате:
+
+<количество> <существительное>
+"""
+
+
 def choose_plural(num, tpl):
     end = int(str(num)[-1])
     if len(str(num)) >= 2:
@@ -12,12 +25,12 @@ def choose_plural(num, tpl):
 
 def auxiliary(number):
     if number == 1:
-        ind = 0
+        index = 0
     elif 2 <= number <= 4:
-        ind = 1
+        index = 1
     elif number == 0 or number > 4:
-        ind = 2
-    return ind
+        index = 2
+    return index
 
 
 print(choose_plural(1012, ('яблоко', 'яблока', 'яблок')))  # 1012 яблок
